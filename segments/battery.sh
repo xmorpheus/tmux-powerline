@@ -33,8 +33,15 @@ run_segment() {
 			output=$(__cutinate $battery_status)
 	esac
 	if [ -n "$output" ]; then
-		echo "$output"
-	fi
+    state=$(cat /sys/class/power_supply/BAT0/status)
+    dw=$(cat /sys/class/power_supply/BAT0/power_now)
+    if [ $state != 'Charging' ]
+    then
+      echo "$(echo "scale=2; $dw/1000000"|bc)W $output"
+    else
+      echo "$output"
+    fi
+  fi
 }
 
 __process_settings() {

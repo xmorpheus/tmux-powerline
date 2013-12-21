@@ -40,24 +40,25 @@ fi
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
 		#"earthquake 3 0" \
-	        "hostname 137 127" \
-                #"ifstat 30 255" \
-                #"ifstat_sys 30 255" \
-                "lan_ip 24 255" \
-                "wan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+	  "hostname 24 255" \
+    "thunderbird 137 127" \
+    "lan_ip 24 255" \
+    "wan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+		"wireless 137 127" \
 		#"pwd 89 211" \
 		#"mailcount 9 255" \
 		#"np_rhytmbox 234 37" \
 		#"cpu 240 136" \
 		#"load 237 167" \
 		#"tmux_mem_cpu_load 234 136" \
-		"battery 137 127" \
+		"battery 24 255" \
 		#"weather 37 255" \
 		#"rainbarf 0 0" \
 		#"xkb_layout 125 117" \
 		#"date_day 235 136" \
-		"date 24 255 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-		"time 24 255 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+		"date 137 127" \
+    #" ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+		"time 137 127 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
 		#"utc_time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
 	)
 fi
