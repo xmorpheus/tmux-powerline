@@ -44,7 +44,8 @@ if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
     "thunderbird 137 127" \
     "lan_ip 24 255" \
     "wan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-		"wireless 137 127" \
+    "ifstat 24 255 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+    "wireless 137 127" \
 		#"pwd 89 211" \
 		#"mailcount 9 255" \
 		#"np_rhytmbox 234 37" \

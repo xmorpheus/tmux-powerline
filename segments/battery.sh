@@ -35,7 +35,7 @@ run_segment() {
 	if [ -n "$output" ]; then
     state=$(cat /sys/class/power_supply/BAT0/status)
     dw=$(cat /sys/class/power_supply/BAT0/power_now)
-    if [ $state != 'Charging' ]
+    if [ $state == 'Discharging' ]
     then
       echo "$(echo "scale=2; $dw/1000000"|bc)W $output"
     else

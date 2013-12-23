@@ -19,15 +19,15 @@ run_segment() {
 	for inf in ${interfaces}; do
 		type=""
 		case ${inf} in
-			eth*) type="⎆"
+			eth*) type=" "
 				;;
-			wlan*) type="☫"
+			wlan*) type=" "
 				;;
 			en*) type=" "
 				;;
 		esac
 		if [ -n "${type}" ]; then
-			formate=$(echo "${formate} ${type} ⇊ %.2f ⇈ %.2f")
+			formate=$(echo "⇊ %.0f ⇈ %.0f")
 			holder=$(echo "${holder},\$$((index)),\$$((index+1))")
 		fi
 		index=$((index+2))
